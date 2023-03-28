@@ -32,14 +32,14 @@ API endpoint above returns the collection of all the books stored in the databas
 ### POSTMAN API:
 GET, PUT, POST, DELETE API's can be tested using POSTMAN API
 
-**API**
-/api/books/ GET         : Retrieves all the books stored in the database <br>
-/api/books/ POST        : Creates a new entry of a book <br>
-/api/books/{id} DELETE  : Deletes an entry of a book with ID
-/api/books/{id} PUT     : To update a book entry with ID
+**API** <br>
+/api/books/ *GET*         : Retrieves all the books stored in the database <br>
+/api/books/ *POST*        : Creates a new entry of a book <br>
+/api/books/{id} *DELETE*  : Deletes an entry of a book with ID <br>
+/api/books/{id} *PUT*     : To update a book entry with ID <br>
 
 ### Routing
-gorilla/mux is being used to setup for routing. It provides some powerful feature like grouping/middleware/handler etc.
+gorilla/mux is being used to setup for routing. It provides some powerful feature like grouping/middleware/handler etc. (Gorilla Mux)[github.com/gorilla/mux]
 
 	r := mux.NewRouter()
 
@@ -47,11 +47,11 @@ gorilla/mux is being used to setup for routing. It provides some powerful featur
 	r.HandleFunc("/api/books/{id}", func(w http.ResponseWriter, r *http.Request)
 
 ### DB
-Mysql is being used as database database/sql and github.com/go-sql-driver/mysql module to create and manage database connection
+Mysql is being used as database database/sql and (MySQL-driver)[github.com/go-sql-driver/mysql] module to create and manage database connection
 
 ### wait-for
-This extension waits for the database port to be set-up
-https://raw.githubusercontent.com/eficode/wait-for/v2.1.0/wait-for /usr/local/bin/wait-for
+This extension waits for the database port to be set-up and then runs the API 
+(wait-for)[https://raw.githubusercontent.com/eficode/wait-for/v2.1.0/wait-for]
 
 ### API Endpoint (GET/POST) 
 ```
@@ -63,11 +63,12 @@ http://127.0.0.1:8080/api/books/{id}
 ```
 
 ### Structure
-main.go -> Main Go application with API endpoints
-book-store.sql -> MySQL database for the book-store (ID, Title, ISBN & Author)
+*main.go* -> Main Go application with API endpoints <br>
+*book-store.sql* -> MySQL database for the book-store (ID, Title, ISBN & Author) <br>
 
-Docker files
-api.Dockerfile -> Commands to instal the required dependencies and run the GO application
-db.Dockerfile  -> .sql file migration to the database
-docker-compose.yml -> Database and API container specification, MySQL database authentication and command to run the mysql database
-entrypoint.sh -> bash file running wait-for extension that waits for the database port tobe set up before running the API
+*Docker files* <br>
+api.Dockerfile -> Commands to instal the required dependencies and run the GO application <br>
+db.Dockerfile  -> .sql file migration to the database <br>
+docker-compose.yml -> Database and API container specification, MySQL database authentication and command to run the mysql database <br>
+entrypoint.sh -> bash file running wait-for extension that waits for the database port to set up before running the API <br>
+----------------------------------------------------------------------------------------------------------------------------------------------------------
