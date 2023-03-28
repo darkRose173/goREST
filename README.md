@@ -1,11 +1,11 @@
-#Go-book-store-api
+# Go-book-store-api
 Go Sample project to implement MySQL CRUD operation for a book store management 
 
 A production ready sample Book store RESTful API with Go using gorilla/mux with Mysql (relational Database). This Project contains a golang implementation of basic API endpoints that can be tested using POSTMAN
 
 Installation & Run
 # Download this project
-git clone git@github.com:darkRose173/goREST.git
+# git clone git@github.com:darkRose173/goREST.git
 
 The following database environment variables are set in the docker-compose.yml file
 {
@@ -15,26 +15,27 @@ The following database environment variables are set in the docker-compose.yml f
      MYSQL_PASSWORD: "secret"
 }
 
-#Run the application via Docker
+# Run the application via Docker
 Requirements
-Step 1: Create the Docker image according to Dockerfile. Ensure docker-compose is installed on your build system. For details on how to do this, see: https://docs.docker.com/compose/install/
+Step 1: Create the Docker image according to Dockerfile. Ensure docker-compose is installed on your build system. For details on how to do this, see:      # https://docs.docker.com/compose/install/
 
 This may take a few minutes. In the root directory /darkRose173/book-store-api run the command:
-$ docker compose build --no-cache
+# $ docker compose build --no-cache
 
 This will create two containers in background for Go and Mysql respectively
 The verification of installation of the same can be verified in the docker Desktop application
 
 Step 2:. Run the application, starting both the MySQL database and the API containers
-$ docker compose up 
+# $ docker compose up 
 
 Step 3: Open a webpage and access the following API endpoint.
-http://localhost:8080/api/books/
+# http://localhost:8080/api/books/
 
-Response: API endpoint above returns the collection of books stored in the database 
+Response: 
+API endpoint above returns the collection of books stored in the database 
 (200 OK)
 
-#POSTMAN API:
+# POSTMAN API:
 GET, PUT, POST, DELETE API's can be tested using POSTMAN API
 
 API
@@ -58,8 +59,8 @@ wait-for
 This extension waits for the database port to be set-up
 https://raw.githubusercontent.com/eficode/wait-for/v2.1.0/wait-for /usr/local/bin/wait-for
 
-# API Endpoint : http://127.0.0.1:8080/api/books/     (GET, POST)
-                 http://127.0.0.1:8080/api/books/{id} (DELETE, PUT) 
+# API Endpoint : http://127.0.0.1:8080/api/books/
+#                http://127.0.0.1:8080/api/books/{id}
                  
 Structure
 main.go -> Main Go application with API endpoints
