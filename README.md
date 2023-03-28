@@ -1,26 +1,26 @@
-# Go-book-store-api
+## Go-book-store-api
 Go Sample project to implement MySQL CRUD operation for a book store management 
 
 A production ready sample Book store RESTful API with Go using gorilla/mux with Mysql (relational Database). This Project contains a golang implementation of basic API endpoints that can be tested using POSTMAN
 
 Installation & Run
-# Download this project
-# git clone git@github.com:darkRose173/goREST.git
+## Download this project
+``` git clone git@github.com:darkRose173/goREST.git ```
 
 The following database environment variables are set in the docker-compose.yml file
-{
+``` {
      MYSQL_RANDOM_ROOT_PASSWORD: "secret"
      MYSQL_DATABASE: "book-store"
      MYSQL_USER: "tester"
      MYSQL_PASSWORD: "secret"
-}
+} ```
 
-# Run the application via Docker
+## Run the application via Docker
 Requirements
-Step 1: Create the Docker image according to Dockerfile. Ensure docker-compose is installed on your build system. For details on how to do this, see:      # https://docs.docker.com/compose/install/
+Step 1: Create the Docker image according to Dockerfile. Ensure docker-compose is installed on your build system. For details on how to do this, see:                [Docker compose](https://docs.docker.com/compose/install/)
 
 This may take a few minutes. In the root directory /darkRose173/book-store-api run the command:
-# $ docker compose build --no-cache
+## $ docker compose build --no-cache
 
 This will create two containers in background for Go and Mysql respectively
 The verification of installation of the same can be verified in the docker Desktop application
