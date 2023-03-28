@@ -26,15 +26,15 @@ http://localhost:8080/api/books/
 ```
 
 **Response:**
-API endpoint above returns the collection of books stored in the database 
+API endpoint above returns the collection of all the books stored in the database 
 (200 OK)
 
 ### POSTMAN API:
 GET, PUT, POST, DELETE API's can be tested using POSTMAN API
 
-### API
-/api/books/ GET         : Retrieves all the books stored in the database 
-/api/books/ POST        : Creates a new entry of a book
+**API**
+/api/books/ GET         : Retrieves all the books stored in the database <br>
+/api/books/ POST        : Creates a new entry of a book <br>
 /api/books/{id} DELETE  : Deletes an entry of a book with ID
 /api/books/{id} PUT     : To update a book entry with ID
 
