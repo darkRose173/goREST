@@ -15,11 +15,11 @@ The following database environment variables are set in the docker-compose.yml f
      MYSQL_PASSWORD: "secret"
 }
 
-Run the application via Docker
+#Run the application via Docker
 Requirements
 Step 1: Create the Docker image according to Dockerfile. Ensure docker-compose is installed on your build system. For details on how to do this, see: https://docs.docker.com/compose/install/
 
-# This may take a few minutes. In the root directory /darkRose173/book-store-api run the command:
+This may take a few minutes. In the root directory /darkRose173/book-store-api run the command:
 $ docker compose build --no-cache
 
 This will create two containers in background for Go and Mysql respectively
@@ -34,7 +34,7 @@ http://localhost:8080/api/books/
 Response: API endpoint above returns the collection of books stored in the database 
 (200 OK)
 
-POSTMAN API:
+#POSTMAN API:
 GET, PUT, POST, DELETE API's can be tested using POSTMAN API
 
 API
