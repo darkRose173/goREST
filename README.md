@@ -5,23 +5,26 @@ A production ready sample Book store RESTful API with Go using gorilla/mux with 
 
 Installation & Run
 ## Download this project
-``` git clone git@github.com:darkRose173/goREST.git ```
+git clone git@github.com:darkRose173/goREST.git
 
 The following database environment variables are set in the docker-compose.yml file
-``` {
+``` 
+{
      MYSQL_RANDOM_ROOT_PASSWORD: "secret"
      MYSQL_DATABASE: "book-store"
      MYSQL_USER: "tester"
      MYSQL_PASSWORD: "secret"
-} ```
+} 
+```
 
 ## Run the application via Docker
 Requirements
 Step 1: Create the Docker image according to Dockerfile. Ensure docker-compose is installed on your build system. For details on how to do this, see:                [Docker compose](https://docs.docker.com/compose/install/)
 
 This may take a few minutes. In the root directory /darkRose173/book-store-api run the command:
-## $ docker compose build --no-cache
-
+``` 
+$ docker compose build --no-cache
+```
 This will create two containers in background for Go and Mysql respectively
 The verification of installation of the same can be verified in the docker Desktop application
 
