@@ -71,3 +71,4 @@ api.Dockerfile -> Commands to instal the required dependencies and run the GO ap
 db.Dockerfile  -> .sql file migration to the database <br>
 docker-compose.yml -> Database and API container specification, MySQL database authentication and command to run the mysql database <br>
 entrypoint.sh -> bash file running wait-for extension that waits for the database port to set up before running the API <br>
+<br>
